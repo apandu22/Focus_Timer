@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Focus Timer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section class="timer" aria-label="Timer">
+    <div class="modes" role="group" aria-label="Session length">
+      <button data-min="25" class="on">Focus 25</button>
+      <button data-min="5">Short break 5</button>
+      <button data-min="15">Long break 15</button>
+    </div>
+    <div id="time" class="time" role="timer" aria-live="off">25:00</div>
+    <div class="bar"><i id="fill"></i></div>
+    <div class="controls">
+      <button id="start" class="primary">Start</button>
+      <button id="reset">Reset</button>
+    </div>
+    <p id="count" class="count">0 focus sessions completed today</p>
+  </section>
+
+  <section class="tasks" aria-label="Tasks">
+    <h2>Today</h2>
+    <form id="form">
+      <input id="input" placeholder="What are you working on?" autocomplete="off" required>
+      <button class="primary">Add task</button>
+    </form>
+    <ul id="list"></ul>
+    <p id="empty" class="empty">No tasks yet. Add one to get started.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
